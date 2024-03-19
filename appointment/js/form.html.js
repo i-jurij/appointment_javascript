@@ -7,7 +7,7 @@
     </div>
   </form>
   */
-import { FormConfig } from "../js/importExport.js";
+import { FormConfig } from "./importExport.js";
 export function printForm() {
   const TAG_FOR_FORM = document.querySelector(FormConfig.appointmentTag);
   if (TAG_FOR_FORM) {

@@ -1,7 +1,7 @@
 export { FormConfig, CalSet } from "../config.js";
 
 export { appointment } from "./appointment.js";
-export { printForm } from "../html/form.html.js";
+export { printForm } from "./form.html.js";
 export { insertCss } from "./insertCss.js";
 
 export { allInOne } from "./allInOne.js";
