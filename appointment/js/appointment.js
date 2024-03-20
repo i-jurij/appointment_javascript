@@ -1,4 +1,4 @@
-import { FormConfig, CalSet, printForm, insertCss, allInOne } from "./importExport.js";
+import { FormConfig, CalSet, printForm, insertCss, allInOne, setCalsetValue } from "./importExport.js";
 
 insertCss();
 printForm();
@@ -6,12 +6,13 @@ printForm();
 //////////////////////////////////////
 // result html out and listener reset and submit
 //for form on page
-export function appointment(calendar, url_to_php_script = '', service_id = '', master_id = '', token = '') {
-  if (url_to_php_script == '' || url_to_php_script == 'undefined' || url_to_php_script == null) {
+export function appointment(calendar, url_for_data_request = '', service_id = '', master_id = '', token = '') {
+  if (url_for_data_request == '' || url_for_data_request == 'undefined' || url_for_data_request == null) {
     allInOne(calendar);
   } else {
-    async function data_from_db(url_to_php_script, enter_data = '') { // or data = {}
+    async function data_from_db(url_for_data_request, service_id = '', master_id = '', token = '') {
       const myHeaders = {
+        Accept: 'application/json',
         //'Content-Type': 'application/json'
         'Content-Type': 'application/x-www-form-urlencoded',
         "X-CSRF-TOKEN": token
@@ -24,35 +25,28 @@ export function appointment(calendar, url_to_php_script = '', service_id = '', m
         credentials: 'same-origin', // include, *same-origin, omit
         headers: myHeaders,
         redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *client
-        body: enter_data
+        referrerPolicy: 'no-referrer', // no-referrer, *client. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+        body: "master_id=" + master_id + "&service_id=" + service_id
         // JSON.stringify(data) // body data type must match "Content-Type" header
       };
-      const myRequest = new Request(url_to_php_script, myInit);
+      const myRequest = new Request(url_for_data_request, myInit);
       const response = await fetch(myRequest);
+      if (!response.ok) {
+        throw new Error(`Error! status: ${response.status}`);
+      }
       const contentType = response.headers.get('content-type');
       //const mytoken = response.headers.get('content-type');
       if (!contentType || !contentType.includes('application/json')) {
         throw new TypeError("Data from server is not JSON!");
       }
-
       return await response.json();
     }
 
-    data_from_db(url_to_php_script, "master_id=" + master_id + "&service_id=" + service_id)
-      .then(promise => promise)
-      .then(CalSetFromPHP => {
-        if (CalSetFromPHP.lehgthCal !== null) CalSet.lehgthCal = CalSetFromPHP.lehgthCal;
-        if (CalSetFromPHP.endtime !== null) CalSet.endtime = CalSetFromPHP.endtime;
-        if (CalSetFromPHP.period !== null) CalSet.period = CalSetFromPHP.period;
-        if (CalSetFromPHP.worktime !== null) CalSet.worktime = CalSetFromPHP.worktime;
-        if (CalSetFromPHP.lunch !== null) CalSet.lunch = CalSetFromPHP.lunch;
-        if (CalSetFromPHP.orgWeekend !== null) CalSet.orgWeekend = CalSetFromPHP.orgWeekend;
-        if (CalSetFromPHP.restDayTime !== null) CalSet.restDayTime = CalSetFromPHP.restDayTime;
-        if (CalSetFromPHP.holiday !== null) CalSet.holiday = CalSetFromPHP.holiday;
-        if (CalSetFromPHP.existAppDateTimeArr !== null) CalSet.existAppDateTimeArr = CalSetFromPHP.existAppDateTimeArr;
-        if (CalSet.servDuration !== null) CalSet.servDuration = CalSet.servDuration;
-
+    data_from_db(url_for_data_request, service_id, master_id, token)
+      .then(CalSetFromServer => {
+        // set new value for Calset
+        setCalsetValue(CalSetFromServer, CalSet);
+        // print calendar
         allInOne(calendar);
       })
       .catch(function (err) {
