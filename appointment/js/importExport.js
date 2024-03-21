@@ -1,4 +1,4 @@
-export { FormConfig, CalSet, setCalsetValue } from "../config.js";
+export { FormConfig, CalSet, setCalsetValue } from "./config.js";
 
 export { appointment } from "./appointment.js";
 export { printForm } from "./form.html.js";
