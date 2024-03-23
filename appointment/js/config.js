@@ -2,7 +2,7 @@
 * data jbject with calendar settings
 */
 export let CalSet = {
-    lehgthCal: 24, //for short and month calendar
+    lehgthCal: 14, //for short and month calendar
     endtime: "17:00",
     period: 60,
     worktime: ['09:00', '19:00'],

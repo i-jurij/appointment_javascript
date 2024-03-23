@@ -209,7 +209,7 @@ var Schedule = function (year, month) {
                         elem.classList.add('tc_mark_for_del')
                     })
                 } else {
-                    input_hidden.name = 'date[]'
+                    input_hidden.name = 'adddate[]'
                     el.target.classList.add('tc_mark_for_add')
                     times_td.forEach(function (elem) {
                         elem.classList.add('tc_mark_for_add')
