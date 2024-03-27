@@ -1,5 +1,5 @@
 /**
-* data jbject with calendar settings
+* data object with calendar settings
 */
 export let CalSet = {
     lehgthCal: 14, //for short and month calendar
@@ -21,7 +21,11 @@ export let CalSet = {
     monthsFullName: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
     monthsShortName: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
 };
-
+ /**
+  * rewrite data in Calset object
+  * @param {object} CalSetFromServer 
+  * @param {object} CalSet 
+  */
 export function setCalsetValue(CalSetFromServer, CalSet) {
     let keys = Object.keys(CalSetFromServer);
     if (!!keys) {

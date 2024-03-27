@@ -7,8 +7,8 @@
     </div>
   </form>
   */
-import { FormConfig } from "./importExport.js";
-export function printForm() {
+
+export function printForm(FormConfig) {
   const TAG_FOR_FORM = document.querySelector(FormConfig.appointmentTag);
   if (TAG_FOR_FORM) {
     let zapis_usluga_form = document.createElement('FORM');

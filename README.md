@@ -128,3 +128,10 @@ in the array format `{'date': {time: 'duration', ...}, ...)`
 `<input type="hidden" name="deltime[]" value="js_timestamp" />`   часы для удаления из часов отдыха
 
 В php скрипте unix_timestamp = js_timestamp/1000   
+
+### Style
+If php is used, css can be included to page like this:
+```<appointment_tag><?php echo '<style>'; include 'src/style.css'; echo '</style>'; ?></appointment_tag> ```   
+In "src/ImportExport.js" comment `import { cssStyle } from "./scripts/style.css.js";` and `insertCss(FormConfig, cssStyle);`   
+and `import { insertCss } from "./scripts/insertCss.js";`
+if only javascript is used leave the tag "appointment_tag" empty on page `<appointment_tag></appointment_tag>`

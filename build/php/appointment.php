@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
          * no required parameters as they setted in config.js
          */
         /*
-        'lehgthCal' => 14,
         'endtime' => '18:00',
         'tz' => 'Europe/Simferopol',
         'orgWeekend' => ['Сб' => '14:00', 'Sat' => '14:00', 'Вс' => '', 'Sun' => ''],
@@ -23,12 +22,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         'holiday' => ['2024-02-23', '2024-03-08', '2024-05-01', '2024-06-12', '2024-06-30'],
         'period' => 60,
         'servDuration' => '120',
-        'worktime' => ['09:00', '20:00'],
         'lunch' => ['12:00', 40],
         */
         /**
          * data from db about existed appointment by master or service
          */
+        'lehgthCal' => 21,
+        'worktime' => ['09:00', '20:00'],
         'existAppDateTimeArr' => [
             '2024-03-25' => ['11:00' => '', '13:00' => '', '14:30' => null],
             '2024-03-26' => ['13:00' => '30', '13:30' => '30', '15:00' => 40],
