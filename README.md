@@ -133,5 +133,5 @@ in the array format `{'date': {time: 'duration', ...}, ...)`
 If php is used, css can be included to page like this:
 ```<appointment_tag><?php echo '<style>'; include 'src/style.css'; echo '</style>'; ?></appointment_tag> ```   
 In "src/ImportExport.js" comment `import { cssStyle } from "./scripts/style.css.js";` and `insertCss(FormConfig, cssStyle);`   
-and `import { insertCss } from "./scripts/insertCss.js";`
+and `import { insertCss } from "./scripts/insertCss.js";`   
 if only javascript is used leave the tag "appointment_tag" empty on page `<appointment_tag></appointment_tag>`
