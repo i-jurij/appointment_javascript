@@ -1,4 +1,3 @@
-export let cssStyle = `
 :root {
     color-scheme: light dark;
 	--big: 1.5rem;
@@ -396,4 +395,3 @@ export let cssStyle = `
 	background-color: var(--date_time_item_back-disabled);
 	color: var(--date_time_item_color-disabled);
 }
-`

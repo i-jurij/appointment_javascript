@@ -1,4 +1,4 @@
-//import { cssStyle } from "./scripts/style.css.js";
+//import { cssStyle } from "../style.css.js"; // renamed style.css if no php
 //import { insertCss } from "./scripts/insertCss.js";
 //insertCss(FormConfig, cssStyle);
 import { CalSet, setCalsetValue, FormConfig } from "./scripts/config.js";

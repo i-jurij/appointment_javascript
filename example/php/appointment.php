@@ -24,11 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         'servDuration' => '120',
         'lunch' => ['12:00', 40],
         */
+        'lehgthCal' => 21,
+        'worktime' => ['09:00', '20:00'],
         /**
          * data from db about existed appointment by master or service
          */
-        'lehgthCal' => 21,
-        'worktime' => ['09:00', '20:00'],
         'existAppDateTimeArr' => [
             '2024-03-25' => ['11:00' => '', '13:00' => '', '14:30' => null],
             '2024-03-26' => ['13:00' => '30', '13:30' => '30', '15:00' => 40],
