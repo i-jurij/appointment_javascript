@@ -2,7 +2,7 @@
 
 # A js for displaying the time for making an appointment with a specialist.
 
-In "minimized_example" is current minimized version with examples files of HTML page and PHP scripts on server.
+In "minimized_example" is minimized version with examples files of HTML page and PHP scripts on server.
 
 ## Pieces
 
@@ -193,6 +193,6 @@ c) leave the tag "appointment_tag" empty on page `<appointment_tag></appointment
 
 For style minify i use rollup. Uncomment `import "./style.css";` in "app.js" and run `npm run build`.
 
-In "minimized_example" is current minimized version with examples files of HTML page and PHP scripts on server.
+In directory "build" and  "minimized_example" can be outdated version of "style.css".
 
-In directory "build" can be no current version of "style.css". Use it from "src" directory.
+Еhe current version of the file is always in the folder "src".
