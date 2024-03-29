@@ -176,7 +176,7 @@ Example of original php array for `existAppDateTimeArr {}`:
 
 In directory "build" and  "minimized_example" can be outdated version of "style.css".
 
-Еhe current version of the file is always in the folder "src".
+The current version of the file is always in the folder "src".
 
 #### PHP
 
