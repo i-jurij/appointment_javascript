@@ -11,7 +11,7 @@
     <?php echo '<style>'; include './style.css'; echo '</style>'; ?>
   </appointment_tag>
   <script type="module">
-    import { printCalendar } from "./importExport.js";
+    import { printCalendar } from "./app.js";
     let url_for_data_request = '';
     let master_id = '';
     let service_id = '';

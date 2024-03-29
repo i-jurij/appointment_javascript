@@ -10,10 +10,10 @@
   <?php if (sizeof($_POST) !== 0) : include "./php/postProc.php"; ?>
   <?php else : ?>
     <appointment_tag>
-      <?php echo '<style>'; include './style.css'; echo '</style>'; ?>
+      <?php echo '<style>'; include './style.min.css'; echo '</style>'; ?>
     </appointment_tag>
     <script type="module">
-      import { printCalendar } from "./importExport.min.js";
+      import { printCalendar } from "./app.min.js";
       let url_for_data_request = 'http://ppntmt-js/php/appointment.php'; 
       let master_id = ''; 
       let service_id = ''; 

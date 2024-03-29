@@ -170,16 +170,27 @@ Example of original php array for `existAppDateTimeArr {}`:
 
 В php скрипте `**unix_timestamp = js_timestamp/1000**`
 
-### Style
+### **Style**
+
+#### PHP
 
 If php is used, css can be included to page like this (default):  
 `<appointment_tag><?php echo '<style>'; include 'src/style.css'; echo '</style>'; ?></appointment_tag>`
 
-if only javascript is used:  
-a) rename file "src/style.css" to "src/style.css.js",  
-b) in "src/ImportExport.js" uncomment  
-`import { cssStyle } from "../style.css.js";`,  
-`insertCss(FormConfig, cssStyle);`,  
-`import { insertCss } from "./scripts/insertCss.js"`,  
-c) leave the tag "appointment_tag" empty on page  
-`<appointment_tag></appointment_tag>`
+#### NO PHP
+
+if only javascript is used:
+
+a) rename file "src/style.css" to "src/style.css.js",
+
+b) in "src/ImportExport.js" uncomment `import { cssStyle } from "../style.css.js";`, `insertCss(FormConfig, cssStyle);`, `import { insertCss } from "./scripts/insertCss.js"`,
+
+c) leave the tag "appointment_tag" empty on page `<appointment_tag></appointment_tag>`
+
+#### OPTIMIZE
+
+For style minify i use rollup. Uncomment `import "./style.css";` in "app.js" and run `npm run build`.
+
+In "minimized_example" is current minimized version with examples files of HTML page and PHP scripts on server.
+
+In directory "build" can be no current version of "style.css". Use it from "src" directory.

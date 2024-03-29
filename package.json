@@ -2,9 +2,11 @@
   "devDependencies": {
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-terser": "^0.4.4",
-    "rollup": "^4.13.2"
+    "rollup": "^4.13.2",
+    "rollup-plugin-scss": "^3.0.0",
+    "sass": "^1.72.0"
   },
-  "name": "rollup-tutorial",
+  "name": "appointment",
   "version": "1.0.0",
   "scripts": {
     "build": "rollup -c"

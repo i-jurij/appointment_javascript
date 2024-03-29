@@ -1421,9 +1421,7 @@ class AllInOne {
     }
 }
 
-//import { cssStyle } from "../style.css.js"; // renamed style.css if no php
-//import { insertCss } from "./scripts/insertCss.js";
-//insertCss(FormConfig, cssStyle);
+// ONLY FOR MINIMIZED //
 
 function printCalendar(calendar, url_for_data_request = '', service_id = '', master_id = '', token = '') {
     Date.prototype.addHours = function (h) {

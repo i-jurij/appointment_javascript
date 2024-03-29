@@ -1,6 +1,13 @@
-//import { cssStyle } from "../style.css.js"; // renamed style.css if no php
+// UNCOMMENT ONLY FOR MINIMIZING //
+//import "./style.css";
+////////////////////////
+// APPLICATION //
+
+// uncomment next three lines if no PHP //
+//import { cssStyle } from "./style.css.js"; // renamed style.css if no php
 //import { insertCss } from "./scripts/insertCss.js";
 //insertCss(FormConfig, cssStyle);
+
 import { CalSet, setCalsetValue, FormConfig } from "./scripts/config.js";
 import { printForm } from "./scripts/form.html.js";
 import { GetAppointment } from "./scripts/getAppointment.js";
