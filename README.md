@@ -174,6 +174,10 @@ Example of original php array for `existAppDateTimeArr {}`:
 
 ### **Style**
 
+In directory "build" and  "minimized_example" can be outdated version of "style.css".
+
+Еhe current version of the file is always in the folder "src".
+
 #### PHP
 
 If php is used, css can be included to page like this (default):  
@@ -192,7 +196,3 @@ c) leave the tag "appointment_tag" empty on page `<appointment_tag></appointment
 #### OPTIMIZE
 
 For style minify i use rollup. Uncomment `import "./style.css";` in "app.js" and run `npm run build`.
-
-In directory "build" and  "minimized_example" can be outdated version of "style.css".
-
-Еhe current version of the file is always in the folder "src".
