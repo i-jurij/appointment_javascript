@@ -44,7 +44,7 @@ b) If you need to query the database to get information about existing records t
 
 and added style from "src/style.css" to page.
 
-Example of full version with URL for DB query and PHP command for include style:
+### **Example of full version with URL for DB query and PHP command for include style:**
 
 ```
   <?php if (sizeof($_POST) !== 0) : include "build/php/postProc.php"; ?>
