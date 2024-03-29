@@ -2,6 +2,8 @@
 
 # A js for displaying the time for making an appointment with a specialist.
 
+In "minimized_example" is current minimized version with examples files of HTML page and PHP scripts on server.
+
 ## Pieces
 
 Type of calendar: "short", "month" or "schedule"  
